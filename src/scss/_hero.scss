@@ -1,0 +1,89 @@
+#hero
+{
+    position:relative;
+    height:700px;
+    background: url("../images/hero-image.jpg");
+    object-fit:cover;
+    background-position: center;
+    .caption-text
+    {   
+        padding:3rem;
+        text-align:center;
+        border-radius:50%;
+        border: 5px solid #fff;
+        position:absolute;
+        left:10%;
+        right:10%;
+        bottom:5%;
+        background-color: rgba($color_primary, .3);
+        box-shadow:2px 2px #000;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        h1 
+        {
+            font-size:2em;
+            font-family: 'Oleo Script', cursive;
+            text-shadow:2px 2px 2px #000;
+        }
+        p 
+        {
+            font-size:18px;
+        }
+        button.btn-dark
+        {
+            margin-top:2em;
+        }
+    }
+}
+
+//Darken caption background on Firefox because our wonderful friends at Mozilla don't have background-filter enabled by default.
+@-moz-document url-prefix() 
+{
+    #hero .caption-text {
+        background-color: rgba($color_primary, .75);
+    }
+}
+
+@media screen and (min-width:$screen_sm)
+{
+    #hero
+    {
+        .caption-text
+        {
+            padding:2rem;
+        }
+        h1 
+        {
+            font-size:3em;
+        }
+        p 
+        {
+            font-size:22px;
+        }
+    }
+}
+
+@media screen and (min-width:$screen_lg)
+{
+    #hero
+    {
+        .caption-text
+        {
+            left:20%;
+            right:20%;
+        }
+    }
+}
+
+@media screen and (min-width:$screen_xl)
+{
+    #hero
+    {
+        background-size: 100%;
+        .caption-text
+        {
+            left:30%;
+            right:30%;
+        }
+    }
+}

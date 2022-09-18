@@ -1,0 +1,214 @@
+main
+{
+    padding:2em 0;
+    background: url('../images/background-image.jpg');
+
+    #section-upper
+    {
+        padding-top:4em;
+        .wrapper
+        {
+            .row
+            {
+                display:flex;
+                flex-direction: column;
+                width:100%;
+                align-items: center;
+                gap:1em;
+                padding-top:1.5em;
+
+                .circle
+                {    
+                    padding:0;
+                    border: 0.5em solid #fff;
+                    background-color: $color_primary;
+                    border-radius: 50%;
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    a 
+                    {
+                        overflow: hidden;
+                        h3 
+                        {    
+                            font-size:26px;
+                            border-radius: 50%;
+                            padding: 0;
+                            margin: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 100%;
+                            text-align: center;
+                            transform: translate(-50%, -50%);
+                        }
+                        img 
+                        {
+                            border-radius: 50%;
+                            opacity: .4;
+                            display: block;
+                            margin:0;
+                        }
+                        &:hover 
+                        {
+                            img
+                            {
+                                opacity: 1;
+                                scale:1.1;
+                            }
+                            h3 
+                            {
+                                opacity:0;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    #section-lower
+    {
+        padding-top:4em;
+        padding-bottom:4em;
+        .wrapper 
+        {
+            .grid
+            {
+                display:grid;
+                grid-gap:10px;
+                grid-template-areas:
+                "A B"
+                "A C"
+                "D D";
+                padding-top:1.5em;
+                #testimonials
+                {
+                    grid-area:A;
+                }
+                #about-our-founder
+                {
+                    grid-area:B;
+
+                }
+                #the-sprinkles-blog
+                {
+                    grid-area:C;
+
+                }
+                #franchising
+                {
+                    grid-area:D;
+
+                }
+            }
+
+        }
+
+    }
+}
+
+.textbox{
+    position:relative;
+    img
+    {
+        display:block;
+    }
+    h3
+    {
+        width:100%;
+        background-color:#442222;
+        color:#fff;
+        position:absolute;
+        bottom:0;
+        text-align:center;
+        margin:0;
+        padding:.5em 0 .5em 0;
+    }
+    a
+    {
+        margin:0;
+        padding:0;
+        display:block;
+        background-color:#8f3a3b;
+        &:hover h3
+        {
+            background-color:transparent;
+            color:#fff;
+            bottom:50%;
+        }
+        &:hover img
+        {
+            opacity:.4;
+        }
+    }
+}
+@media  screen and (min-width:$screen_md) 
+{
+    //Thank goodness for minification
+    main
+    {
+        #company-info
+        {
+            #section-upper
+            {
+                .circle
+                {    
+                    a 
+                    {
+                        img 
+                        {
+                            margin:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (min-width:992px)
+{
+    
+    nav 
+    {
+        .navbar-collapse
+        {
+            background-color: transparent;
+            ul.navbar-nav
+            {
+                height:inherit;
+            }
+        }
+    }
+    
+    main
+    {
+
+        #section-upper
+        {
+            .wrapper
+            {
+                .row
+                {
+                    flex-direction: row;
+                }
+            }
+        }
+        #section-lower
+        {
+            .wrapper
+            {
+                .grid
+                {
+                    grid-template-areas:
+                    "A B C"
+                    "A D D";
+                }
+            }
+        }
+    }
+}

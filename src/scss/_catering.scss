@@ -1,0 +1,54 @@
+#catering
+{
+    padding: 4em 0;
+    background-color:$color_secondary;
+    .wrapper
+    {
+        display:flex;
+        gap: 30px;
+        flex-direction: column;
+        img
+        {
+            margin:auto;
+            border-radius:50%;
+            border:2px solid #fff;
+        }
+        .description
+        {
+            padding: 1em 0;
+            h2
+            {
+                text-align:center;
+            }
+            p
+            {
+                padding-bottom:1em;
+            }
+            button
+            {
+                display: block;
+                margin: auto;
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width:$screen_lg)
+{
+    #catering
+    {
+        .wrapper
+        {
+            flex-direction: row;
+            align-items: center;
+            img 
+            {
+                max-width:600px;
+                margin-left:0;
+            }
+
+        }
+    }
+
+}

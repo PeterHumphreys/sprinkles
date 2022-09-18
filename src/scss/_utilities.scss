@@ -1,0 +1,69 @@
+.wrapper
+{
+    max-width: 100%;
+    padding:1em;
+    margin: 0 auto;
+}
+
+
+//Credit goes to this genius- https://codepen.io/ericrasch/pen/kWWzzk
+.line-behind 
+{
+    text-align: center;
+    position: relative;
+    display: table;
+    white-space: nowrap;
+    &:before, &:after 
+    {
+        border-top: 3px solid white;
+        content: '';
+        display: table-cell;
+        position: relative;
+        top: 0.5em;
+        width: 45%;
+          
+        &:before { right: 1.5%; }
+        &:after { left: 1.5%; }
+    }
+}
+
+
+@media  screen and (min-width:$screen_sm) 
+{
+    .wrapper
+    {
+        max-width: 540px;
+    }
+}
+
+@media  screen and (min-width:$screen_md) 
+{
+    .wrapper
+    {
+        max-width: 720px;
+    }
+}
+
+@media  screen and (min-width:$screen_lg) 
+{
+    .wrapper
+    {
+        max-width: 960px;
+    }
+}
+
+@media  screen and (min-width: $screen_xl) 
+{
+    .wrapper
+    {
+        max-width: 1140px;
+    }
+}
+
+@media  screen and (min-width:$screen_xxl) 
+{
+    .wrapper
+    {
+        max-width: 1320px;
+    }
+}
