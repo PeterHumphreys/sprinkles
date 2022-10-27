@@ -3,12 +3,13 @@ const navItemsUl = document.querySelector(".nav-items");
 const navFlyIn = document.querySelector("#nav-fly-in");
 const SCREEN_WIDTH_LARGE = 992;
 let currScreenWidth = window.innerWidth;
-
 const toggleBtn = document.querySelector("#menu-toggle");
 
-toggleBtn.addEventListener("click", () =>
+toggleBtn.addEventListener("click", (e) =>
 {
-    navFlyIn.classList.toggle("show")
+    e.preventDefault();
+    navFlyIn.classList.toggle("show");
+    document.body.classList.toggle("scroll-disabled");
 })
 
 window.addEventListener("resize", () =>
@@ -52,8 +53,9 @@ function changeNavDesktop()
     //Remove menu toggle button
     navItemsUl.removeChild(toggleBtn)
 
-    //If flyIn is open, remove "show" class
-    navFlyIn.classList.remove("show")
+    //If flyIn is open, remove "show" class and enable scrolling on the page
+    navFlyIn.classList.remove("show");
+    document.body.classList.remove("scroll-disabled");
 }
 
 function changeNavMobile()

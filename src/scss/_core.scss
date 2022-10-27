@@ -97,7 +97,7 @@ button, input, select
 }
 
 body{background-color: $color_primary;}
-body.body-nav-open
+body.scroll-disabled
 {    
     height: 100vh;
     overflow: hidden;
